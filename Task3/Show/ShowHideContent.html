@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/Task3/Show/ShowHideContent.js" defer></script>
+<style>
+    .faq-box {
+    border: 1px solid #777;
+    margin-bottom: 5px;
+    width: 450px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #e1e1e1;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.content {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    line-height: 1.4;
+}
+
+.show-btn, .hide-btn {
+    color: rgb(18, 18, 42);
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+</style>
+    <title>Show Hide Content</title>
+</head>
+<body>
+    <div id="accordion-container">
+  
+  <div class="faq-box">
+    <div class="header">
+      <span>What is Lorem Ipsum?</span>
+      <button class="show-btn">Show</button>
+    </div>
+    <div class="content" style="display: none;">
+      <p>Lorem ipsum is simply dummy text of the printing industry...</p>
+      <button class="hide-btn">Hide</button>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <div class="header">
+      <span>Why do we use it?</span>
+      <button class="show-btn">Show</button>
+    </div>
+    <div class="content" style="display: none;">
+      <p>It is a long established fact that a reader will be distracted...</p>
+      <button class="hide-btn">Hide</button>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <div class="header">
+      <span>Where does it come from?</span>
+      <button class="show-btn">Show</button>
+    </div>
+    <div class="content" style="display: none;">
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
+      <button class="hide-btn">Hide</button>
+    </div>
+  </div>
+
+</div>
+    
+</body>
+</html>
