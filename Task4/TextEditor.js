@@ -1,30 +1,41 @@
-
 const textarea = document.querySelector('textarea[name="textarea"]');
-const fontFamily = document.getElementById("font-family");
 const fontSizeInput = document.querySelector('input[name="font-Size"]');
 const boldCheck = document.querySelector('input[name="bold"]');
 const italicCheck = document.querySelector('input[name="italic"]');
 const underlineCheck = document.querySelector('input[name="underline"]');
 
-
-fontFamily.addEventListener("change", (e) => {
-    textarea.style.fontFamily = e.target.value;
-});
-
 fontSizeInput.addEventListener("input", (e) => {
-    textarea.style.fontSize = e.target.value + "px";
-});
+    const size = parseInt(e.target.value);
 
+    if (size > 30) {
+        textarea.style.fontSize = "30px"; // Cap it at 30
+    } else if (size < 8) {
+        textarea.style.fontSize = "8px";  // Minimum 8
+    } else {
+        textarea.style.fontSize = size + "px";
+    }
+});
 
 boldCheck.addEventListener("change", (e) => {
-    textarea.style.fontWeight = e.target.checked ? "bold" : "normal";
+    if (e.target.checked === true) {
+        textarea.style.fontWeight = "bold";
+    } else {
+        textarea.style.fontWeight = "normal";
+    }
 });
 
 italicCheck.addEventListener("change", (e) => {
-    textarea.style.fontStyle = e.target.checked ? "italic" : "normal";
+    if (e.target.checked === true) {
+        textarea.style.fontStyle = "italic";
+    } else {
+        textarea.style.fontStyle = "normal";
+    }
 });
 
-
 underlineCheck.addEventListener("change", (e) => {
-    textarea.style.textDecoration = e.target.checked ? "underline" : "none";
+    if (e.target.checked === true) {
+        textarea.style.textDecoration = "underline";
+    } else {
+        textarea.style.textDecoration = "none";
+    }
 });
